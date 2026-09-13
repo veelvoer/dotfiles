@@ -1,0 +1,12 @@
+# Git host authentication — GitHub CLI
+#
+# Copy your real ~/.config/gh/hosts.yml here ONLY if you want to sync it.
+# It contains an OAuth token, so prefer keeping it machine-local instead.
+#
+# Real file location: ~/.config/gh/hosts.yml
+# Template for a fresh machine (create the dir, run:  gh auth login)
+
+github.com:
+  oauth_token: "<paste token here — or run: gh auth login>"
+  user: "your-github-username"
+  git_protocol: ssh

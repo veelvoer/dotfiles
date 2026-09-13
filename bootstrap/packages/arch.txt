@@ -1,0 +1,47 @@
+# Recommended packages — Arch / CachyOS (pacman)
+# One package per line; '#' starts a comment.
+# Used only by:  ./install.sh --packages
+
+# Shell & editors
+fish
+git
+micro
+neovim
+gh
+
+# Terminal
+kitty
+
+# Window manager / compositor
+hyprland
+hyprlock
+hypridle
+
+# File manager (terminal)
+yazi
+dolphin
+
+# Bar / shell
+# NOTE: quickshell is not in the official repos. Install from AUR:
+#   yay -S quickshell-git
+# quickshell-git
+
+# Launcher & misc Wayland tools
+rofi
+swaybg
+grim
+slurp
+wl-clipboard
+playerctl
+brightnessctl
+xdg-desktop-portal-hyprland
+
+# Productivity / DX
+fastfetch
+zoxide
+fd
+fzf
+bat
+
+# Fonts (JetBrainsMono Nerd Font is used by the prompt/bar)
+# ttf-jetbrains-mono-nerd

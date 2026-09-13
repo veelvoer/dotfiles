@@ -1,0 +1,48 @@
+# Recommended packages — Fedora (dnf)
+# One package per line; '#' starts a comment.
+# Used only by:  ./install.sh --packages
+
+# Shell & editors
+fish
+git
+micro
+neovim
+gh
+
+# Terminal
+kitty
+
+# Window manager / compositor
+hyprland
+hyprlock
+hypridle
+
+# File manager (terminal)
+yazi
+dolphin
+
+# Bar / shell
+# NOTE: quickshell is not in the default Fedora repos.
+# Enable it first with:
+#   sudo dnf copr enable errornointernet/quickshell
+# quickshell
+
+# Launcher & misc Wayland tools
+rofi
+swaybg
+grim
+slurp
+wl-clipboard
+playerctl
+brightnessctl
+xdg-desktop-portal-hyprland
+
+# Productivity / DX
+fastfetch
+zoxide
+fd-find
+fzf
+bat
+
+# Fonts (JetBrainsMono Nerd Font is used by the prompt/bar)
+# jetbrains-mono-fonts  (or install ~/.local/share/fonts from the Nerd Fonts release)
