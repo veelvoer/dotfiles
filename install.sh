@@ -10,6 +10,8 @@
 # Usage
 #   ./install.sh                 link all managed configuration
 #   ./install.sh --packages      also install the recommended packages
+#   ./install.sh --shell         set fish as your default shell (chsh)
+#   ./install.sh --full          = --packages + --shell
 #   ./install.sh --dry-run       show what would change without changing it
 #   ./install.sh --check         report link status only
 #   ./install.sh --help          this help
@@ -34,11 +36,14 @@ DOTFILES_ROOT=$(dotfiles_root "$0")
 # ---------------------------------------------------------------------------
 DRY_RUN=0
 DO_PACKAGES=0
+DO_SHELL=0
 DO_CHECK=0
 DO_HELP=0
 for arg in "$@"; do
     case "$arg" in
         --packages) DO_PACKAGES=1 ;;
+        --shell)    DO_SHELL=1 ;;
+        --full)     DO_PACKAGES=1; DO_SHELL=1 ;;
         --dry-run)  DRY_RUN=1 ;;
         --check)    DO_CHECK=1 ;;
         --help|-h)  DO_HELP=1 ;;
@@ -93,6 +98,16 @@ link_dotfile "config/fish/config.fish" "$HOME/.config/fish/config.fish"
 # Neovim — whole config dir.
 link_dotfile "config/nvim" "$HOME/.config/nvim"
 
+# VSCodium — user settings/keybindings (the surrounding dir is app-managed).
+want_dir "$HOME/.config/VSCodium/User"
+link_dotfile "config/vscodium/User/settings.json" "$HOME/.config/VSCodium/User/settings.json"
+link_dotfile "config/vscodium/User/keybindings.json" "$HOME/.config/VSCodium/User/keybindings.json"
+link_dotfile "config/vscodium/mountain-theme.css" "$HOME/.config/VSCodium/mountain-theme.css"
+
+# GTK file-dialog bookmarks.
+want_dir "$HOME/.config/gtk-3.0"
+link_dotfile "config/gtk-3.0/bookmarks" "$HOME/.config/gtk-3.0/bookmarks"
+
 # ---------------------------------------------------------------------------
 # Packages (optional, never automatic).
 # ---------------------------------------------------------------------------
@@ -120,6 +135,29 @@ if [ "$DO_PACKAGES" = 1 ]; then
 fi
 
 # ---------------------------------------------------------------------------
+# Default shell (optional, needs the fish binary).
+# ---------------------------------------------------------------------------
+if [ "$DO_SHELL" = 1 ]; then
+    if has_cmd fish; then
+        _fish=$(command -v fish)
+        if [ "$(getent passwd "$(id -un)" | cut -d: -f7)" = "$_fish" ]; then
+            ok "default shell is already fish ($_fish)"
+        else
+            info "setting default shell to fish ($_fish) via chsh"
+            if [ "$DRY_RUN" = 1 ]; then
+                info "would run: chsh -s $_fish"
+            elif has_cmd sudo; then
+                sudo chsh -s "$_fish" "$(id -un)"
+            else
+                chsh -s "$_fish"
+            fi
+        fi
+    else
+        warn "--shell requested but fish is not installed; run ./install.sh --packages first"
+    fi
+fi
+
+# ---------------------------------------------------------------------------
 # Post-link user guidance.
 # ---------------------------------------------------------------------------
 printf '\n'
@@ -128,3 +166,6 @@ printf '  * New shell config applies to new shells (re-login or spawn a new term
 printf '  * Hyprland & Quickshell changes apply after your next login (SUPER+M or log out).\n'
 printf '  * Files replaced during linking are kept in %s/backups/\n' "$DOTFILES_ROOT"
 printf '  * To remove all managed links again: %s/uninstall.sh\n' "$DOTFILES_ROOT"
+if [ "$DO_SHELL" = 0 ] && [ "$DO_PACKAGES" = 0 ]; then
+    printf '  * Optional: ./install.sh --full  (packages + set fish as default shell)\n'
+fi

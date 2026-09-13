@@ -12,6 +12,8 @@ on **Fedora**, **Arch/CachyOS**, and **NixOS**.
 | Quickshell bar    | `config/quickshell/` (dir)                 | `~/.config/quickshell/`                    |
 | Kitty             | `config/kitty/kitty.conf`                  | `~/.config/kitty/kitty.conf` (+ legacy)    |
 | Neovim            | `config/nvim/` (dir)                       | `~/.config/nvim/`                          |
+| VSCodium          | `config/vscodium/` (files)                 | `~/.config/VSCodium/User/…` + `mountain-theme.css` |
+| GTK file dialog   | `config/gtk-3.0/bookmarks`                 | `~/.config/gtk-3.0/bookmarks`              |
 | Shell fallbacks   | `home/.bashrc`, `.bash_profile`, `.bash_logout` | `~/.bashrc`, …                     |
 | Git               | `home/.gitconfig`                          | `~/.gitconfig`                             |
 | Launcher entry    | `home/.local/share/applications/yazi.desktop` | `~/.local/share/applications/yazi.desktop` |
@@ -23,15 +25,16 @@ re-verifying Hyprland picks it up — the symlink to the flat path is intentiona
 
 ### Machine-local by design (never linked)
 `~/.config/fish/fish_variables`, `~/.ssh/`, `~/.config/gh/hosts.yml`,
-app caches, `~/.local/share` app data, `.opencode`, VSCodium. These are
-recreated or live only on the machine.
+app caches, `~/.local/share` app data, `.opencode`, VSCodium app data
+(`User/History`, `workspaceStorage`, caches — its `settings.json`/`keybindings.json`
+*are* managed). These are recreated or live only on the machine.
 
 ## Install
 
 ```sh
 cd ~/dotfiles
 ./install.sh            # create symlinks (backs up anything in the way)
-./install.sh --packages # also install recommended packages (dnf/pacman)
+./install.sh --full     # symlinks + recommended packages + set fish as default shell
 ```
 
 Idempotent and safe:

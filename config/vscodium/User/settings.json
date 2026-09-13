@@ -1,0 +1,261 @@
+{
+  // =================================================================
+  // 1. ADVANCED TYPOGRAPHY & HYPER-FLUID CANVAS ENGINE
+  // =================================================================
+  "editor.fontFamily": "'Inter', 'JetBrains Mono', monospace",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 13.5,
+  "editor.lineHeight": 1.65,
+  "editor.letterSpacing": 0.25,
+  
+  // Kinetic Smooth Cursor & Physics Scrolling
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2.5,
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "editor.mouseWheelScrollSensitivity": 1.2,
+  "editor.fastScrollSensitivity": 5,
+
+  // =================================================================
+  // 2. MAXIMUM FUNCTIONAL WORKSPACE CONTROL
+  // =================================================================
+  // Dirty Tabs & Unsaved Workspace Metrics
+  "workbench.editor.showTabs": "single",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabActionLocation": "right",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.closeOnFileDelete": true,
+  "files.autoSave": "off",
+
+  // Contextual File Tree & Indent Anchors
+  "explorer.openEditors.visible": 1,
+  "explorer.compactFolders": true,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 14,
+  "workbench.tree.enableStickyScroll": true,
+
+  // Inline Code Diagnostics & Error Floating Panels
+  "editor.renderValidationDecorations": "editable",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "problem.visibility": true,
+  "editor.showUnused": true,
+  "editor.showDeprecated": true,
+  "editor.inlayHints.enabled": "onUnlessPressed",
+  "editor.inlayHints.fontSize": 11,
+
+  // Sticky Context Headers & Breadcrumb Trail
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 4,
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "on",
+  "breadcrumbs.symbolPath": "last",
+  "breadcrumbs.icons": true,
+
+  // Clean UI Chrome (Zero Clutter)
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": true,
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "window.titleBarStyle": "custom",
+  "window.customTitleBarVisibility": "never",
+  "window.dialogStyle": "custom",
+  "workbench.dialogs.customSubtle": true,
+
+  // Minimal Canvas Elements
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.renderLineHighlight": "none",
+  "editor.glyphMargin": true,
+  "editor.folding": false,
+  "editor.lineNumbers": "on",
+  "editor.renderWhitespace": "selection",
+  "editor.matchBrackets": "always",
+
+  // Pure Bracket Pairing
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": false,
+  "editor.guides.indentation": true,
+
+  // =================================================================
+  // 3. MOUNTAIN TEAL COLOR PALETTE (HIGH-DEFINITION INDICATORS)
+  // =================================================================
+  "workbench.colorCustomizations": {
+    // Translucent Canvas Overlay (~85% Alpha for Hyprland Gaussian Blur)
+    "background": "#0D2C34D9",
+    "editor.background": "#0D2C34D9",
+    "sideBar.background": "#0D2C34E6",
+    "activityBar.background": "#0D2C34E6",
+    "statusBar.background": "#0D2C34E6",
+    "statusBar.noFolderBackground": "#0D2C34E6",
+    "titleBar.activeBackground": "#0D2C34E6",
+    "titleBar.inactiveBackground": "#0D2C34E6",
+    "editorGroupHeader.tabsBackground": "#0D2C3400",
+
+    // Sharp Opaque Foreground Text
+    "foreground": "#E8F8FA",
+    "editor.foreground": "#E8F8FA",
+    "sideBar.foreground": "#E8F8FA",
+    "statusBar.foreground": "#92D5DD",
+    "statusBarItem.remoteBackground": "#219BA480",
+    "statusBarItem.remoteForeground": "#E8F8FA",
+    "statusBarItem.prominentBackground": "#12424C",
+    "statusBarItem.prominentHoverBackground": "#186A73",
+    "statusBar.debuggingBackground": "#0D2C34E6",
+    "statusBar.debuggingForeground": "#3FD0DC",
+
+    // Unsaved File Indicators & Tab Accent Borders
+    "tab.dirtyBorder": "#3FD0DC",
+    "tab.activeModifiedBorder": "#3FD0DC",
+    "tab.inactiveModifiedBorder": "#219BA480",
+    "tab.activeBackground": "#12424CC0",
+    "tab.activeForeground": "#F2FCFD",
+    "tab.inactiveBackground": "#0D2C3400",
+    "tab.inactiveForeground": "#92D5DD80",
+    "tab.border": "#00000000",
+    "tab.activeBorder": "#3FD0DC",
+
+    // Glowing Cursor, Active Selections & Search Tokens
+    "editorCursor.foreground": "#3FD0DC",
+    "focusBorder": "#219BA466",
+    "editor.selectionBackground": "#186A73A0",
+    "editor.selectionHighlightBackground": "#186A7350",
+    "editor.wordHighlightBackground": "#219BA440",
+    "editor.wordHighlightStrongBackground": "#3FD0DC40",
+    "editor.lineHighlightBackground": "#12424C50",
+    "editor.lineHighlightBorder": "#00000000",
+    "editor.findMatchBackground": "#3FD0DC66",
+    "editor.findMatchHighlightBackground": "#219BA440",
+
+    // Sticky Scroll Header Styling
+    "editorStickyScroll.background": "#0D2C34F5",
+    "editorStickyScrollHover.background": "#12424CF2",
+    "editorStickyScroll.shadow": "#00000060",
+
+    // Interactive Breadcrumbs
+    "breadcrumb.background": "#0D2C3400",
+    "breadcrumb.foreground": "#92D5DD80",
+    "breadcrumb.focusForeground": "#E8F8FA",
+    "breadcrumb.activeSelectionForeground": "#3FD0DC",
+    "breadcrumbPicker.background": "#0D2C34F8",
+
+    // Popups, Hover Panels & Command Palette
+    "widget.shadow": "#00000080",
+    "widget.border": "#219BA440",
+    "editorWidget.background": "#0D2C34F8",
+    "editorWidget.border": "#219BA440",
+    "editorHoverWidget.background": "#0D2C34F8",
+    "editorHoverWidget.border": "#219BA440",
+    "editorSuggestWidget.background": "#0D2C34F8",
+    "editorSuggestWidget.border": "#219BA440",
+    "editorSuggestWidget.selectedBackground": "#12424CE6",
+    "editorSuggestWidget.highlightForeground": "#3FD0DC",
+
+    // High-Visibility Diagnostics
+    "editorError.foreground": "#FF6B6B",
+    "editorWarning.foreground": "#FFE066",
+    "editorInfo.foreground": "#3FD0DC",
+    "editorHint.foreground": "#92D5DD",
+    "editorGutter.errorBackground": "#FF6B6B",
+    "editorGutter.warningBackground": "#FFE066",
+
+    // Command Inputs
+    "input.background": "#12424C80",
+    "input.foreground": "#E8F8FA",
+    "input.border": "#219BA440",
+    "input.placeholderForeground": "#92D5DD66",
+    "inputValidation.infoBackground": "#0D2C34F2",
+    "inputValidation.infoBorder": "#3FD0DC",
+    "pickerGroup.border": "#219BA440",
+    "pickerGroup.foreground": "#3FD0DC",
+
+    // Clean UI Dividers & Active Indent Trees
+    "sideBar.border": "#219BA426",
+    "editorGroup.border": "#219BA426",
+    "panel.border": "#219BA426",
+    "tree.indentGuidesStroke": "#219BA433",
+    "tree.activeIndentGuidesStroke": "#3FD0DCBB",
+
+    // Git Status Indicators (Gutter & Explorer)
+    "editorGutter.addedBackground": "#3FD0DC99",
+    "editorGutter.modifiedBackground": "#219BA499",
+    "editorGutter.deletedBackground": "#E0535399",
+    "gitDecoration.addedResourceForeground": "#3FD0DC",
+    "gitDecoration.modifiedResourceForeground": "#219BA4",
+    "gitDecoration.deletedResourceForeground": "#E0535380",
+    "gitDecoration.untrackedResourceForeground": "#92D5DD99",
+    "gitDecoration.conflictingResourceForeground": "#FF6B6B",
+    "gitDecoration.submoduleResourceForeground": "#92D5DD80"
+  },
+
+  // =================================================================
+  // 4. FINE-TUNED MOUNTAIN TEAL SYNTAX HIGHLIGHTING
+  // =================================================================
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": {
+          "foreground": "#68A5AD",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["keyword", "storage.type", "storage.modifier"],
+        "settings": {
+          "foreground": "#3FD0DC",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": ["entity.name.function", "support.function"],
+        "settings": {
+          "foreground": "#E8F8FA"
+        }
+      },
+      {
+        "scope": ["string", "punctuation.definition.string"],
+        "settings": {
+          "foreground": "#8AEAD2"
+        }
+      },
+      {
+        "scope": ["constant.numeric", "constant.language", "boolean"],
+        "settings": {
+          "foreground": "#219BA4"
+        }
+      },
+      {
+        "scope": ["variable", "support.variable"],
+        "settings": {
+          "foreground": "#D0F0F5"
+        }
+      },
+      {
+        "scope": ["entity.name.type", "entity.other.inherited-class"],
+        "settings": {
+          "foreground": "#3FD0DC",
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  },
+  "workbench.editorAssociations": {
+    "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.qrc": "default",
+    "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.ui": "default",
+    "*.qrc": "qt-core.qrcEditor"
+  },
+  "qt-core.additionalQtPaths": [
+    {
+      "name": "Qt-6.11.2-linux-g++-x86_64_from_PATH",
+      "path": "/usr/bin/qmake"
+    }
+  ]
+}

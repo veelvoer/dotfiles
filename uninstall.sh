@@ -54,6 +54,10 @@ $HOME/.config/kitty/kitty.conf
 $HOME/.config/kitty.conf
 $HOME/.config/fish/config.fish
 $HOME/.config/nvim
+$HOME/.config/VSCodium/User/settings.json
+$HOME/.config/VSCodium/User/keybindings.json
+$HOME/.config/VSCodium/mountain-theme.css
+$HOME/.config/gtk-3.0/bookmarks
 "
 
 removed=0
